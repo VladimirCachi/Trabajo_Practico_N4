@@ -1,48 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="#" data-th-href="@{webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
-    <title>TP4 - Facultad de Ingeniería UNJu</title>
-    <!-- 	Intente usar thymeleaf pero me daba error no importara lo que hacia -->
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="#" data-th-href="@{webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TP4</title>
 </head>
 <body>
-    <header>
-        <div>
-            <nav class="navbar bg-body-tertiary bg-info-subtle">
-                <div class="container-fluid">
-                    <a class="navbar-brand text-info-emphasis fw-bolder" href="https://www.fi.unju.edu.ar">
-                        <img src="img/logo-fi.png" alt="Logo" width="90" height="54" class="d-inline-block align-text-middle">
-                        Facultad de Ingeniería UNJu - 52 Años Educando
-                    </a>
-                </div>
-            </nav>
-        </div>
-        <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary bg-info-subtle">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link fw-bolder text-info-emphasis" href="#inicio">Inicio</a>
-                            <a class="nav-link fw-bolder text-info-emphasis" href="#acerca">Acerca de</a>
-                            <a class="nav-link fw-bolder text-info-emphasis" href="#carreras">Carreras</a>
-                            <a class="nav-link fw-bolder text-info-emphasis" href="#noticias">Noticias</a>
-                            <a class="nav-link fw-bolder text-info-emphasis" href="#contacto">Contacto</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <div class="d-flex">
-        <main class="p-2 flex-grow-1 bg-dark text-white">
-            <section id="inicio">
+	<header data-th-replace="~{fragments/navbar :: navbar}"></header>
+	<div class="d-flex">
+		<main class="p-2 flex-grow-1 bg-dark text-white">
+			<div id="inicio">
                 <h1>Facultad de Ingeniería</h1>
                 <p class="fw-medium">Una facultad, fundada el 24 de mayo de 1972, con accesibilidad a carreras de pregrado, grado y posgrado.</p>
                 <p class="fw-medium">Nuestra misión es formar profesionales altamente calificados, capaces de enfrentar los retos del mundo moderno y contribuir al desarrollo sostenible de la región y del país.</p>
                 <p class="fw-medium">Contamos con una infraestructura moderna y un cuerpo docente de excelencia, comprometidos con la educación y la investigación.</p>
-            </section>
-            <section id="acerca">
+            </div>
+            <div id="acerca">
                 <h2>Acerca de</h2>
                 <p class="fw-medium">Las políticas de la Universidad Nacional de Jujuy, y especialmente de la Facultad de Ingeniería, tienden a ampliar el área de influencia y a fortalecer su acción institucional, en respuesta a la demanda social creciente de formación de recursos humanos que contribuyan al desarrollo científico, tecnológico y cultural.</p>
                 <p class="fw-medium">De esta forma, la Facultad se constituyó en vector de desarrollo de la provincia, por cuanto:</p>
@@ -53,8 +27,8 @@
                     <li class="list-group-item bg-dark text-white">Fomenta la investigación y el desarrollo en áreas clave para el crecimiento económico y social.</li>
                     <li class="list-group-item bg-dark text-white">Establece vínculos con otras instituciones académicas y profesionales, tanto a nivel nacional como internacional.</li>
                 </ul>
-            </section>
-            <section id="carreras">
+            </div>
+			<div id="carreras">
                 <h2>Carreras</h2>
                 <h3>Carreras de grado:</h3>
                 <ul class="list-group list-group-horizontal">
@@ -70,8 +44,8 @@
                     <li class="list-group-item bg-dark text-white flex-fill">Tecnicatura Universitaria en Energías Renovables</li>
                 </ul>
                 <a class="btn btn-outline-info d-flex p-2 justify-content-center fw-bolder" role="button" href="https://www.fi.unju.edu.ar">Más Información</a>
-            </section>
-            <section id="noticias">
+            </div>
+            <div id="noticias">
 				<h2>Noticias</h2>
 				<div class="d-flex mb-3">
 					<img class="p-2" src="img/Vacunacion.jpg" alt="Campaña de Vacunación" width="400" height="550">
@@ -131,46 +105,11 @@
 						<p>Formulario de inscripción: <a href="http://forms.gle/5qD3U18dRi63swDU6" target="_blank">http://forms.gle/5qD3U18dRi63swDU6</a></p>
 					</div>
 				</div>
-			</section>			
-        </main>
-        <aside class="p-2 bg-primary-subtle text-primary-emphasis">
-            <h3>Recursos Adicionales</h3>
-            <div class="d-flex flex-column">
-                <a class="p-2" href="https://www.fi.unju.edu.ar/servicios/biblioteca.html" target="_blank"><img alt="Biblioteca" src="img/Biblioteca-FI.jpg"></a>
-                <p class="p-2 fw-medium">La biblioteca de la Facultad de Ingeniería ofrece una amplia colección de libros, revistas y recursos electrónicos para apoyar el aprendizaje y la investigación de los estudiantes y docentes.</p>
-                <a class="p-2" href="https://campus.fi.unju.edu.ar" target="_blank"><img alt="Campus Virtual" src="img/Campus.png"></a>
-                <p class="p-2 fw-medium">El campus virtual permite a los estudiantes acceder a materiales de estudio, realizar actividades en línea y comunicarse con sus profesores desde cualquier lugar.</p>
-                <a class="p-2" href="https://www.fi.unju.edu.ar/siu-guarani-alumnos" target="_blank"><img alt="SIU Guaraní" src="img/Logo_guarani.png"></a>
-                <p class="p-2 fw-medium">El sistema SIU Guaraní es una herramienta esencial para la gestión académica, permitiendo a los estudiantes realizar trámites como inscripciones y consultas de notas de manera eficiente.</p>
-            </div>
-        </aside>
-    </div>
-    <footer id="contacto" class="d-flex bg-black text-white">
-        <div class="p-2">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-black text-white"><h4>FACULTAD DE INGENIERÍA - UNJu</h4></li>
-                <li class="list-group-item bg-black text-white">
-                    <p>Dirección: Ítalo Palanca Nº 10</p>
-                    <p>Teléfono: 0388 422-1580</p>
-                    <p>Email: info@fi.unju.edu.ar</p>
-                </li>
-            </ul>
-        </div>
-        <div class="p-2">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-black text-white"><h4>Redes Sociales</h4></li>
-                <li class="list-group-item bg-black">
-                    <p><a class="link-primary link-underline link-underline-opacity-0" href="https://www.facebook.com/fiunju/">Facebook</a></p>
-                    <p><a class="link-danger link-underline link-underline-opacity-0" href="https://www.youtube.com/channel/UCgS9XJlKKSYI1oJ4lIOo77A">YouTube</a></p>
-                    <p><a class="link-info link-underline link-underline-opacity-0" href="https://www.linkedin.com/school/facultad-de-ingenieria-unju">LinkedIn</a></p>
-                    <p><a class="link-warning link-underline link-underline-opacity-0" href="https://www.instagram.com/fiunju/">Instagram</a></p>
-                </li>
-            </ul>
-        </div>
-        <div class="p-2">
-            <h4>Copyright © 2014-2022 - Facultad de Ingeniería - UNJu</h4>
-        </div>
-    </footer>
-    <script data-th-src="@{webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+			</div>
+		</main>
+		<aside data-th-replace="~{fragments/ladoDePagina :: asidde}"></aside>
+	</div>
+	<footer id="contacto" data-th-replace="~{fragments/finalDePagina :: futer}"></footer>
+	<script data-th-src="@{webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>
